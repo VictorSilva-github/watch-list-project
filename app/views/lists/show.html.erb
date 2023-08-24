@@ -1,0 +1,32 @@
+<div class="m-3">
+<h3><%= @list.name %></h3>
+<h4>********************</h4>
+
+<ul>
+  <% @list.movies.each do |movie| %>
+    <h4><li> <%= link_to movie.title %></h4>
+  <% end %>
+</ul>
+
+<br>
+<%# <strong ><p> <%= link_to "Add Movie", new_list_bookmark_path, class:"btn btn-primary "%>
+<%# </p> </strong> %>
+
+<p><%= link_to 'Back To Main Page', lists_path, class:"btn btn-primary pt-10" %> <i class="fa-solid fa-house-crack"></i></p>
+</div>
+
+
+
+ <%#
+# <h2 class="m-2"><%= @list.name</h2> %>
+<%# <p></p> %>
+<%# <div class="form">
+<p><strong>Movie: </strong> <%= @movie.title </p>
+<%# </div> %>
+
+
+<%# <br>
+<strong ><p> <%= link_to "Create Movie", new_movie_path, class:"btn btn-primary " %>
+<%# </p> </strong> %>
+<%# </div> %>
+<%# </div> %>
