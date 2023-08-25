@@ -3,10 +3,12 @@ class BookmarksController < ApplicationController
   before_action :set_list, only: [:new, :create]
 
   def new
+    @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
   end
 
   def create
+    @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     if @bookmark.save

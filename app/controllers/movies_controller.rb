@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(movie_params)
     @movie.save
-    redirect_to lists_path(@movie)
+    redirect_to root_path(@movie)
   end
 
   private

@@ -24,7 +24,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to lists_path, status: :see_other
+    redirect_to list_path(@list), status: :see_other
   end
 
   private
